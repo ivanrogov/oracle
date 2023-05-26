@@ -154,14 +154,6 @@ version = '1.0-SNAPSHOT'
 description = 'oci-vault-connector'
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
-jar {
-    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)    
-	zip64 = true
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-}
-
 publishing {
     publications {
         maven(MavenPublication) {
