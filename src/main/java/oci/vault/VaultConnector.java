@@ -18,7 +18,7 @@ public class VaultConnector {
 
     public static void main(String[] args) throws IOException {
 
-        AbstractAuthenticationDetailsProvider provider = getAuthenticationDetailsProvider();
+        AbstractAuthenticationDetailsProvider provider = getInstanceAuthenticationDetailsProvider();
 
         /* Create a service client */
         try (SecretsClient client = SecretsClient.builder().build(provider)) {
